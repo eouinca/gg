@@ -5348,4 +5348,10 @@
     <string-array name="config_serviceStateLocationAllowedPackages">
         <item>"com.android.phone"</item>
     </string-array>
+    <!-- Аппаратная оптимизация под процессоры Qualcomm Snapdragon -->
+    <string name="config_hardware_architecture">arm64-v8a</string>
+    <string name="config_hardware_vendor">qualcomm</string>
+    <!-- Включаем поддержку размытия окон Blur для графики Adreno -->
+    <bool name="config_sf_blur">true</bool>
 </resources>
+
