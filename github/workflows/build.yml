@@ -1,0 +1,37 @@
+name: Android Desktop OS Cloud Build
+
+# Сборка будет запускаться автоматически при каждом сохранении кода (push)
+on:
+  push:
+    branches: [ "12.1.x" ]
+  workflow_dispatch: # Позволяет запускать сборку вручную кнопкой
+
+jobs:
+  build-os:
+    runs-on: ubuntu-22.04 # Запускаем на чистой Linux Ubuntu
+
+    steps:
+    # Шаг 1: Скачиваем наш репозиторий со всеми правками
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    # Шаг 2: Устанавливаем все необходимые утилиты для компиляции AOSP
+    - name: Install Build Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+
+    # Шаг 3: Настраиваем виртуальную среду Java (JDK 11 необходим для Android 12)
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+
+    # Шаг 4: Проверяем синтаксис наших измененных файлов перед сборкой
+    - name: Verify Config and Dimens XML
+      run: |
+        echo "Checking custom Windows-Android configurations..."
+        xmllint --noout core/res/res/values/config.xml
+        xmllint --noout core/res/res/values/dimens.xml
+        echo "All files are valid and ready!"
