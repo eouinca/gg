@@ -5353,5 +5353,7 @@
     <string name="config_hardware_vendor">qualcomm</string>
     <!-- Включаем поддержку размытия окон Blur для графики Adreno -->
     <bool name="config_sf_blur">true</bool>
+	<!-- Панель задач всегда активна и не скрывается -->
+<bool name="config_showNavigationBar">true</bool>
 </resources>
 
