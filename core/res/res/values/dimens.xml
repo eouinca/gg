@@ -975,4 +975,8 @@
     <dimen name="secondary_rounded_corner_radius_adjustment">0px</dimen>
     <dimen name="secondary_rounded_corner_radius_top_adjustment">0px</dimen>
     <dimen name="secondary_rounded_corner_radius_bottom_adjustment">0px</dimen>
+    <!-- Наш кастомный размер панели задач под стиль Windows -->
+    <dimen name="navigation_bar_height">40dp</dimen>
+    <dimen name="navigation_bar_height_landscape">40dp</dimen>
+    <dimen name="navigation_bar_width">40dp</dimen>
 </resources>
