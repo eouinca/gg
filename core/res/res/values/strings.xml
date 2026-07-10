@@ -502,7 +502,7 @@
     <!-- Button to lock the screen, within the Phone Options dialog -->
     <string name="screen_lock">Screen lock</string>
     <!-- Button to turn off the phone, within the Phone Options dialog -->
-    <string name="power_off">Power off</string>
+    <string name="power_off">Завершение работы</string>
     <!-- Spoken description for ringer silent option. [CHAR LIMIT=NONE] -->
     <string name="silent_mode_silent">Ringer off</string>
     <!-- Spoken description for ringer vibrate option. [CHAR LIMIT=NONE] -->
@@ -6072,4 +6072,8 @@ ul.</string>
     <string name="ui_translation_accessibility_translated_text"><xliff:g id="message" example="Hello">%1$s</xliff:g> Translated.</string>
     <!-- Accessibility message announced to notify the user when the system has finished translating the content displayed on the screen to a different language after the user requested translation. [CHAR LIMIT=NONE] -->
     <string name="ui_translation_accessibility_translation_finished">Message translated from <xliff:g id="from_language" example="English">%1$s</xliff:g> to <xliff:g id="to_language" example="French">%2$s</xliff:g>.</string>
-</resources>
+    <!-- Системные переводы под стиль ПК -->
+    <string name="power_off">Завершение работы</string>
+    <string name="global_action_restart">Перезагрузка компьютера</string>
+    <string name="about_phone">Свойства системы (О ПК)</string>
+  </resources>
